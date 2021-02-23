@@ -1,0 +1,16 @@
+{
+  "name": "creer-un-projet-maven-avec-plusieurs-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "node config.js",
+    "serve": "node config.js && firefox index.html"
+  },
+  "author": "Mamadou Saliou DIALLO",
+  "license": "ISC",
+  "dependencies": {
+    "@asciidoctor/reveal.js": "^4.1.0",
+    "asciidoctor": "^2.2.1"
+  }
+}

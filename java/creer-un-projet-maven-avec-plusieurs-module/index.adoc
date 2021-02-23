@@ -1,0 +1,18 @@
+= Comment créer un projet maven avec plusieurs modules
+:revealjs_theme: simple
+:customcss: css/style.css
+
+== Slide One
+
+* Foo
+* Bar
+* World
+
+== Slide Two
+
+Hello World - Good Bye Cruel World
+
+[NOTE.speaker]
+--
+Actually things aren't that bad
+--
