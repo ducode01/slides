@@ -1,0 +1,7 @@
+:revealjs_theme: simple
+:customcss: css/style.css
+:revealjs_history: true
+:revealjs_hash: true
+:revealjs_slideNumber: c/t
+:revealjs_showSlideNumber: print
+:revealjs_overview: true
