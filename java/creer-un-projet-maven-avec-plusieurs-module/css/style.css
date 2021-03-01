@@ -9,7 +9,9 @@ body {
 section {
   font-family: 'Varela Round', sans-serif !important;
 }
-
+h1{
+  font-size: 5vw !important;
+}
 h1, h2, h3, h4, h5 {
   font-family: 'Varela Round', sans-serif !important;
   text-transform: inherit !important;
