@@ -1,0 +1,21 @@
+{
+  "name": "base-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp browser-sync",
+    "gen": "node config.js"
+  },
+  "author": "Mamadou Saliou DIALLO",
+  "license": "ISC",
+  "dependencies": {
+    "@asciidoctor/reveal.js": "^4.1.0",
+    "asciidoctor": "^2.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-run": "^1.7.1"
+  }
+}

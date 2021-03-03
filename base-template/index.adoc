@@ -1,0 +1,18 @@
+= Créer un projet maven avec plusieurs modules ?
+include::./revealjs.config.adoc[]
+
+
+== Slide Ones
+
+* Foo barius
+* Bar
+* World
+
+== Slide Two
+
+Hello World - Good Bye Cruel World
+
+[NOTE.speaker]
+--
+Actually things aren't that bad.
+--
