@@ -1,0 +1,11 @@
+= Creer un projet maven multi-module
+
+== How to run ?
+
+```
+npm install
+```
+
+```
+npm run build
+```
