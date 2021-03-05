@@ -1,18 +1,96 @@
 = Créer un projet maven avec plusieurs modules ?
 include::./revealjs.config.adoc[]
 
+== Avantages
 
-== Slide Ones
+* Découper un projet en module (front, backend, ...)
+* Maven s'occupe de l'ordre d'exécution
+* Une seule commande pour tout construire
+* Configuration **CI-Server** facile (un seul **Job** Jenkins suffit)
 
-* Foo barius
-* Bar
-* World
 
-== Slide Two
 
-Hello World - Good Bye Cruel World
+== Les étapes à suivre
+* Créer le projet parent 
+* Ajouter les sous modules
 
-[NOTE.speaker]
---
-Actually things aren't that bad.
---
+
+
+== Création du projet principal (1)
+* Créer le fichier *pom.xml*
+[source, shell]
+....
+mvn archetype:generate -DgroupId=com.ducode01 -DartifactId=projet-parent
+....
+
+* Se placer dans le repertoire `projet-parent`
+
+[source, shell]
+....
+cd projet-parent/
+....
+
+
+
+
+== Création du projet principal (2)
+* Ouvrir le fichier *pom.xml* et ajouter la ligne suivante à la racine de la balise *<project>*
+
+[source, xml]
+....
+<packaging>pom</packaging>
+....
+
+
+
+
+== Création des sous-modules
+
+* Se placer dans le repertoire `projet-parent`
+
+[source, shell]
+....
+mvn archetype:generate -DgroupId=com.ducode01  -DartifactId=server
+mvn archetype:generate -DgroupId=com.ducode01  -DartifactId=webapp
+....
+
+
+
+== Nouveau pom.xml parent
+
+* Le nouveau *pom.xml* doit contenir le code suivant
+
+[source, xml]
+....
+<modules>
+    <module>server</module>
+    <module>webapp</module>
+</modules>
+....
+
+== Et les deux nouveaux modules ?
+
+* Le *pom.xml*  de chacun des deux modules doit contenir le code suivant
+
+[source, xml]
+....
+<parent>
+    <artifactId>projet-parent</artifactId>
+    <groupId>com.ducode01</groupId>
+    <version>1.0-SNAPSHOT</version>
+</parent>
+....
+
+== Construire le projet
+
+* On peut enfin construire tous les deux projets en se mettant à la racine du projet en une seule commande
+
+[source, shell]
+....
+mvn package
+....
+
+== Sources
+
+* https://stackoverflow.com/a/15559236/8353607[Stackoverflow]
+* Livre https://books.sonatype.com/mvnex-book/reference/multimodule.html[Maven By Example]

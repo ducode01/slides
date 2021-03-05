@@ -1,5 +1,6 @@
 :revealjs_theme: simple
-:customcss: css/style.css
+:customcss: css/style.css 
+:highlightjsdir: highlight
 :revealjs_history: true
 :revealjs_hash: true
 :revealjs_slideNumber: c/t

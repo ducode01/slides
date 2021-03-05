@@ -43,3 +43,7 @@ minor:after {
   text-align: left;
   color: grey;
 }
+
+strong {
+  color: #9abc1e !important;
+}
